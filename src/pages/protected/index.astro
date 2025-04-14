@@ -1,0 +1,14 @@
+---
+// import { UserCard } from '@/components/user-card'
+
+const session = () => {
+  if (Astro.locals.session) {
+    return Astro.locals.session
+  } else {
+    // Redirect to login page if the user is not authenticated
+    return Astro.redirect('/login')
+  }
+}
+---
+
+<!-- <UserCard initialSession={session} /> -->
